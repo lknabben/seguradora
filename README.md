@@ -1,0 +1,2 @@
+# seguradora
+Seguradora API

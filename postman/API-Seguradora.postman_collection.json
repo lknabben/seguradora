@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "337c3fc5-376a-49a4-9ea4-f83ded39104d",
+		"name": "API-Seguradora",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Criar cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Cliente 1\",\n    \"cpf\": \"71195407009\",\n    \"cidade\": \"Curitiba\",\n    \"uf\": \"PR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/clientes/6014a2bc6f97071a918d57dc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"6014a2bc6f97071a918d57dc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente por ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/clientes/601495901662701fb793eda6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"601495901662701fb793eda6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Cliente 1\",\n    \"cpf\": \"71195407009\",\n    \"cidade\": \"Curitiba\",\n    \"uf\": \"PR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/clientes/60147bdad4fcf857040b0d97",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"60147bdad4fcf857040b0d97"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Apolice",
+			"item": [
+				{
+					"name": "Criar Apolice",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cliente\": {\n        \"id\": \"6014a3ca74bb1f012a10e44b\"\n    },\n    \"dataInicioVigencia\" : \"10/01/2020\",\n    \"dataFimVigencia\": \"29/01/2021\",\n    \"placaVeiculo\" : \"ABC-123\",\n    \"valor\" : 125\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/apolice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"apolice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Apolices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/apolice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"apolice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar apolice por numero da apolice",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cliente\": {\n        \"id\": \"601461110754493d81ff6e1a\"\n    },\n    \"dataInicioVigencia\" : \"29/01/2020\",\n    \"dataFimVigencia\": \"29/02/2019\",\n    \"placaVeiculo\" : \"ABC-123\",\n    \"valor\" : 125.30\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/apolice/3657743174124748380",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"apolice",
+								"3657743174124748380"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apolice por numero",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/apolice/7121437863236875464",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"apolice",
+								"7121437863236875464"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar apolice por numero da apolice",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/apolice/6551648173868512072",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"apolice",
+								"6551648173868512072"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
